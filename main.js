@@ -1,5 +1,4 @@
 //1) Výplata
-
 const salary = (wage,hours, days) => {
     return Math.round(wage*hours*days)
 }
@@ -47,3 +46,23 @@ const calculate = (number1, operation, number2) => {
                      }
 }
 */
+
+// Volitelný 1) Výplňořez
+const fillcut = (str, len) => {
+    if (str.length>len){
+        return str.slice(0, len)
+    }else if (str.length<len){
+        return str.padStart(len, '.') 
+    }else{ //else if (str.length === len){
+        return str
+    }
+}
+
+//Volitelný 2) Přestupný rok
+const isLeapYear = (year) => {
+    if ((year % 4) === 0){
+        return true
+    }else{
+        return false
+    }
+}
